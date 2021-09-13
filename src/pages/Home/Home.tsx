@@ -12,10 +12,6 @@ const PageContainer = styled(Page)`
   background: var(--bg-secondary);
 `;
 
-const Text = styled.h1`
-  font-family: IBM Plex Sans Thai Looped;
-`;
-
 const Hero = styled(HeroGold)`
   min-height: 40vh;
   padding-top: 10rem;
@@ -29,27 +25,50 @@ const Hero = styled(HeroGold)`
 
 const CenterBox = styled.div`
   background-color: #E0BF5C;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: 20px;
+  margin-left: 20px;
   padding: 20px;
+  text-align: center;
+  align-items: center;
 `;
 
- const Title = styled.h2`
-    font-size: 45px;
-    font-family: serif;
-    margin-bottom: 7px;
- `;
+const Title = styled.h2`
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+  font-weight: 550;
+  font-family: serif;
+  color: #2a2a2a;
+`;
+
+const Subtitle = styled.text`
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: Courier New;
+  color: #2a2a2a;
+`;
+
+const TextContainer = styled.div`
+  
+`;
 
 
 export const HomePage = () => {
   return (
     <PageContainer>
-      <Text>home</Text>
+      yo
       <Hero>
         <CenterBox>
-          <Title>
-            National Honor Society
-          </Title>
+          <TextContainer>
+            <Title>
+              National Honor Society
+            </Title>
+            <Subtitle>
+              East Ridge High School Chapter
+            </Subtitle>
+          </TextContainer>
         </CenterBox>
       </Hero>
     </PageContainer>
