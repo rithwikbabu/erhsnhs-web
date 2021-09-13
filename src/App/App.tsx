@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import Amplify from 'aws-amplify';
-import awsConfig from '../aws-exports';
+// import awsConfig from '../aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
+import { PageLoader } from 'src/components/Page';
 import { NavBar } from 'src/components/NavBar';
 import {
   BrowserRouter as Router,
@@ -12,7 +13,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-Amplify.configure(awsConfig);
+// Amplify.configure(awsConfig);
 
 const HomePage = React.lazy(() => import('../pages/Home/Home'));
 
@@ -48,13 +49,14 @@ const AppContent = () => {
 
   return (
     <>
-    {/* <React.Suspense fallback={<PageLoader />}> */}
+    <React.Suspense fallback={<PageLoader />}>
     <NavBar />
     <Switch>
           <Route exact component={HomePage} path="/" />
           {/* <Route path="/not-found" component={NotFoundPage} /> */}
           <Redirect to="/" />
         </Switch>
+    </React.Suspense>
     </>
   );
 };
@@ -69,4 +71,5 @@ const App = () => {
   );
 };
 
-export default withAuthenticator(App);
+export default App;
+// export default withAuthenticator(App);
