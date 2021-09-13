@@ -1,13 +1,13 @@
 {
   "auth": {
-    "amplifyapp4b78aac4": {
+    "amplifyapp1383dcf2": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "loginMechanisms": [
-          "EMAIL"
+          "PREFERRED_USERNAME"
         ],
         "signupAttributes": [
           "EMAIL"
