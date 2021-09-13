@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../logo.svg';
 import './App.css';
 import Amplify from 'aws-amplify';
 import awsConfig from '../aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
+import { NavBar } from 'src/components/NavBar';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +13,8 @@ import {
 } from 'react-router-dom';
 
 Amplify.configure(awsConfig);
+
+const HomePage = React.lazy(() => import('../pages/Home/Home'));
 
 const AppContent = () => {
   const location = useLocation<{ noscroll?: boolean } | null>();
@@ -45,13 +47,15 @@ const AppContent = () => {
   }, [location.pathname, location.state]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          bum
-        </p>
-      </header>
-    </div>
+    <>
+    {/* <React.Suspense fallback={<PageLoader />}> */}
+    <NavBar />
+    <Switch>
+          <Route exact component={HomePage} path="/" />
+          {/* <Route path="/not-found" component={NotFoundPage} /> */}
+          <Redirect to="/" />
+        </Switch>
+    </>
   );
 };
 
