@@ -5,7 +5,7 @@ import './Page.scss';
 import { ErrorBoundary } from '@sentry/react';
 
 import styled from 'styled-components/macro';
-import { LoaderSpinner } from './Loader/LoaderSpinner';
+// import { LoaderSpinner } from './Loader/LoaderSpinner';
 
 const ErrorContainer = styled.div`
   display: flex;
@@ -47,6 +47,6 @@ export const PageLoading = styled(Page)`
 
 export const PageLoader = () => (
   <PageLoading>
-    <LoaderSpinner />
+    {/* <LoaderSpinner /> */}
   </PageLoading>
 );

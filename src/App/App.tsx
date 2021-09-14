@@ -3,7 +3,7 @@ import './App.css';
 import Amplify from 'aws-amplify';
 // import awsConfig from '../aws-exports';
 import { withAuthenticator } from 'aws-amplify-react';
-import { PageLoader } from 'src/components/Page';
+// import { PageLoader } from 'src/components/Page';
 import { NavBar } from 'src/components/NavBar';
 import {
   BrowserRouter as Router,
@@ -49,7 +49,8 @@ const AppContent = () => {
 
   return (
     <>
-    <React.Suspense fallback={<PageLoader />}>
+    {/* <React.Suspense fallback={<PageLoader />}> */}
+    <React.Suspense fallback>
     <NavBar />
     <Switch>
           <Route exact component={HomePage} path="/" />
