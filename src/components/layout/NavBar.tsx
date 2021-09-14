@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 import { Img } from '../Img';
 
 export const ClearLink = styled(Link) `
-
+  font-family: montserrat;
+  font-weight: 400;
+  font-size: 11px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 14px; !important;
 `;
 
 export const ImgLink = styled(ClearLink)`
@@ -20,15 +26,12 @@ const LogoMobile = styled(Img)`
 
 const NavSection = styled.div`
   display: flex;
-  height: 100%;
+  height: auto;
   width: 100%;
-  align-items: center;
-  &:not(:first-child) {
-    margin-left: 0.5rem;
-  }
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
+  align-items: top;
+  justify-content center;
+  margin: 0 42.5px;
+  padding: 0 0 40px;
 `;
 
 const OuterNav = styled.div`
@@ -36,9 +39,10 @@ const OuterNav = styled.div`
 `;
 
 const NavContainerOuter = styled(OuterNav)`
-  // position: absolute;
-  top: 0;
+  position: relative;
+  top: 0px;
   left: 0;
+  vertical-align: top;
   width: 100%;
   height: auto;
   z-index: 10;
@@ -53,7 +57,7 @@ const NavContainerOuter = styled(OuterNav)`
 
 const MobileNavContainerOuter = styled(OuterNav)`
   position: absolute;
-  top: 100px;
+  top: 147px;
   left: 0;
   width: 85vw;
   height: auto;
@@ -82,8 +86,9 @@ export type NavBarType = {};
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  vertical-align: top;
   width: 100%;
-  height: 100px;
+  height: auto;
   align-items: center;
 `;
 
@@ -115,20 +120,29 @@ export const NavBar: React.FC<NavBarType> = (props) => {
       <NavContainerOuter>
         <NavContainer>
           <NavSection>
-            <ClearLink to="/projects" style={{ marginLeft: '2rem' }}>
-              Services
-            </ClearLink>
-            {/* <ClearLink to="/help" style={{ marginLeft: '2rem' }}>
-            Help
-            </ClearLink> */}
-            <ClearLink to="/blog" style={{ marginLeft: '2rem' }}>
-              Blog
-            </ClearLink>
-            <ClearLink to="/about" style={{ marginLeft: '2rem' }}>
+            <ClearLink to="/about">
               About
             </ClearLink>
-            <ClearLink to="/contact-us" style={{ marginLeft: '2rem' }}>
-              Contact Us
+            <ClearLink to="/submit-hours">
+              Submit Hours
+            </ClearLink>
+            <ClearLink to="/events">
+              Events
+            </ClearLink>
+            <ClearLink to="/tutoring">
+              Tutoring
+            </ClearLink>
+            <ClearLink to="/committees">
+              Committees
+            </ClearLink>
+            <ClearLink to="/announcements">
+              Announcements
+            </ClearLink>
+            <ClearLink to="/documents">
+              Documents
+            </ClearLink>
+            <ClearLink to="/photo-gallery">
+              Photo Gallery
             </ClearLink>
           </NavSection>
         </NavContainer>
