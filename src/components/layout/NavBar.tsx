@@ -3,29 +3,14 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import { Img } from '../Img';
 
-const Content2 = styled(Content)`
-  margin: 0 1rem;
+export const ClearLink = styled(Link) `
+
 `;
 
-export const ClearLink = styled(Link) `
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  align-items: center;
-  font-family: IBM Plex Sans Thai Looped;
-  border: none;
-  outline: none;
-  background: transparent;
-  min-width: 50px;
-  justify-content: center;
-  mix-blend-mode: difference;
+export const ImgLink = styled(ClearLink)`
 `;
 
 const Logo = styled(Img)`
-  height: 29px;
-  fill: var(--text-primary);
 `;
 
 const LogoMobile = styled(Img)`
@@ -36,6 +21,7 @@ const LogoMobile = styled(Img)`
 const NavSection = styled.div`
   display: flex;
   height: 100%;
+  width: 100%;
   align-items: center;
   &:not(:first-child) {
     margin-left: 0.5rem;
@@ -45,25 +31,29 @@ const NavSection = styled.div`
   }
 `;
 
-const NavContainerOuter = styled.div`
-  position: absolute;
+const OuterNav = styled.div`
+  background-color: white;
+`;
+
+const NavContainerOuter = styled(OuterNav)`
+  // position: absolute;
   top: 0;
   left: 0;
-  width: 85vw;
+  width: 100%;
   height: auto;
   z-index: 10;
-  background: #1a161300;
+  background: #white;
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
   border-bottom: 1px solid #1a1613);
 `;
 
-const MobileNavContainerOuter = styled.div`
+const MobileNavContainerOuter = styled(OuterNav)`
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 85vw;
   height: auto;
@@ -71,7 +61,7 @@ const MobileNavContainerOuter = styled.div`
   background: #1a161300;
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
   border-bottom: 1px solid #1a1613);
@@ -79,7 +69,7 @@ const MobileNavContainerOuter = styled.div`
 
 const ContainerMobile = styled(MobileNavContainerOuter)`
   display: none;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1000px) {
     display: flex;
   }
   img {
@@ -89,26 +79,42 @@ const ContainerMobile = styled(MobileNavContainerOuter)`
 
 export type NavBarType = {};
 
-const NavContainer = styled(Content2)`
+const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
+  height: 100px;
   align-items: center;
 `;
+
+const Header = styled.div`
+  background-color: white;
+  padding-top: 52px;
+  padding-bottom: 25px;
+  text-align: center;
+`;
+
+const NavLogo: React.FC<NavBarType> = (props) => {
+  return (
+    <Header>
+      <ImgLink to='/' aria-label="Home page">
+        <Logo
+          width="59px"
+          height="70px"
+          src="nhslogo.png"
+        />
+      </ImgLink>
+    </Header>
+  );
+}
 
 export const NavBar: React.FC<NavBarType> = (props) => {
   return (
     <>
+      <NavLogo/>
       <NavContainerOuter>
         <NavContainer>
           <NavSection>
-            <ClearLink to="/" style={{ marginLeft: '-0.5rem' }}>
-              <Logo
-                src="omicronwhitesprite.svg"
-                alt="Omicron Logo"
-              />
-            </ClearLink>
             <ClearLink to="/projects" style={{ marginLeft: '2rem' }}>
               Services
             </ClearLink>
@@ -134,8 +140,8 @@ export const NavBar: React.FC<NavBarType> = (props) => {
             <LogoMobile
                 height="30px"
                 width="100px"
-                src="omicronwhitesprite.svg"
-                alt="Omicron Logo"
+                src="nhslogo.png"
+                alt="NHS Logo"
               />
           </ClearLink>
           <NavSection>

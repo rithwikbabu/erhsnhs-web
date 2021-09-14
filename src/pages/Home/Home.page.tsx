@@ -1,5 +1,5 @@
 import { Content } from 'src/components/layout/Content';
-import { HeroBlue } from 'src/components/layout/Hero/HeroBlue';
+import { HeroGold } from 'src/components/layout/Hero/HeroGold';
 import { Page } from 'src/components/layout/Page';
 
 import { NewsSection } from './components/News/News.section';
@@ -14,7 +14,7 @@ export const ClearLink = styled(Link) `
 font-family: IBM Plex Sans Thai Looped;
   font-size: 1.15rem;
 `;
-const Hero = styled(HeroBlue)`
+const Hero = styled(HeroGold)`
   min-height: 40vh;
   padding-top: 10rem;
   padding-bottom: 11rem;

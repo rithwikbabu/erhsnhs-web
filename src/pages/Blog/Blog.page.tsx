@@ -1,5 +1,5 @@
 import { Content } from 'src/components/layout/Content';
-import { HeroBlue } from 'src/components/layout/Hero/HeroBlue';
+import { HeroGold } from 'src/components/layout/Hero/HeroGold';
 import { Page } from 'src/components/layout/Page';
 import styled from 'styled-components/macro';
 import { ClearLink, Content2, ItemsContainer, Item, Title, PageContainer, NavBlock, Categories, TitleLink, Date } from './components';

@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 import { Img } from 'src/components/Img';
 import { Link } from 'react-router-dom';
-import { HeroBlue } from 'src/components/layout/Hero/HeroBlue';
+import { HeroGold } from 'src/components/layout/Hero/HeroGold';
 import { Page } from 'src/components/layout/Page';
 import { Content } from 'src/components/layout/Content';
 
@@ -97,7 +97,7 @@ export const TitleLink = styled.a`
   }
 `;
 
-export const Hero = styled(HeroBlue)`
+export const Hero = styled(HeroGold)`
   min-height: 40vh;
   padding-top: 10rem;
   padding-bottom: 10rem;

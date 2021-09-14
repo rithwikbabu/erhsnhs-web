@@ -27,27 +27,7 @@ const Hero = styled.div`
     position: relative;
     z-index: 1;
     // background: linear-gradient(45deg, #013f28, #1c0c64);
-    background: linear-gradient(217deg, rgba(255,80,80,.8), rgba(255,0,0,0) 70.71%),
-                linear-gradient(127deg, rgba(0,255, 128,.8), rgba(0,255,0,0) 70.71%),
-                linear-gradient(336deg, rgba(51,102,255,.8), rgba(0,0,255,0) 70.71%);
-  }
-
-  &:before {
-    background: #400414;
-    box-shadow: 0 0 540px 164px rgb(64,4,20, .7);
-    z-index:2;
-    top: -100%;
-    left: -75%;
-    opacity: .7;
-  }
-
-  &:after {
-    background: rgb(0,0,0,0);
-    // box-shadow: 0 0 540px 164px white;
-    z-index:2;
-    bottom: -100%;
-    right: -90%;
-    opacity: .4;
+    background: #e0d59d;
   }
 
   &:after {
@@ -65,7 +45,7 @@ const Hero = styled.div`
   }
 `;
 
-export const HeroBlue: React.FC<{
+export const HeroGold: React.FC<{
   children: React.ReactNode;
   className?: string;
 }> = ({ children, className }) => {
