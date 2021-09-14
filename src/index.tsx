@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
-// import WebFont from 'webfontloader';
+import WebFont from 'webfontloader';
 
-// WebFont.load({
-//   google: {
-//     families: ['Montserrat', 'IBM Plex Sans Thai Looped']
-//   }
-// });
+WebFont.load({
+  google: {
+    families: ['Montserrat', 'IBM Plex Sans Thai Looped']
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>

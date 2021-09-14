@@ -1,10 +1,8 @@
 import React from 'react';
-import './App.css';
-import Amplify from 'aws-amplify';
-// import awsConfig from '../aws-exports';
-import { withAuthenticator } from 'aws-amplify-react';
-// import { PageLoader } from 'src/components/Page';
-import { NavBar } from 'src/components/NavBar';
+import logo from './logo.png';
+import './App.scss';
+import { NavBar } from 'src/components/layout/NavBar';
+import { FooterSection } from 'src/sections/Footer.section';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,9 +11,16 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-// Amplify.configure(awsConfig);
+import { PageLoader } from 'src/components/layout/Page';
+import CookieConsent from 'src/components/CookieConsent';
 
-const HomePage = React.lazy(() => import('../pages/Home/Home'));
+const HomePage = React.lazy(() => import('../pages/Home/Home.page'));
+const ServicesPage = React.lazy(() => import('../pages/Services/Services.page'));
+const BlogPage = React.lazy(() => import('../pages/Blog/Blog.page'));
+const AboutPage = React.lazy(() => import('../pages/About/About.page'));
+const ContactPage = React.lazy(() => import('../pages/ContactUs/Contact.page'));
+const Service1 = React.lazy(() => import('../pages/Services/ServicePages/Service1.page'));
+const PrivacyPolicy = React.lazy(() => import('../pages/About/PrivacyPolicy.page'));
 
 const AppContent = () => {
   const location = useLocation<{ noscroll?: boolean } | null>();
@@ -49,15 +54,29 @@ const AppContent = () => {
 
   return (
     <>
-    {/* <React.Suspense fallback={<PageLoader />}> */}
-    <React.Suspense fallback>
-    <NavBar />
-    <Switch>
+      {/* <React.Suspense fallback={<React.Fragment />}>
+        
+      </React.Suspense> */}
+      <React.Suspense fallback={<PageLoader />}>
+      <NavBar />
+        <Switch>
+          <Route exact component={ServicesPage} path="/projects" />
+          <Route exact component={BlogPage} path="/blog" />
+          <Route exact component={AboutPage} path="/about" />
           <Route exact component={HomePage} path="/" />
+          <Route exact component={ContactPage} path="/contact-us" />
+          {/* service pages */}
+          <Route exact component={Service1} path="/projects/mental-health-monitoring-on-social-media" />
+          {/* footer pages */}
+          <Route exact component={PrivacyPolicy} path="/about/privacy-policy" />
           {/* <Route path="/not-found" component={NotFoundPage} /> */}
           <Redirect to="/" />
         </Switch>
-    </React.Suspense>
+        {/* <CookieConsent></CookieConsent> */}
+      </React.Suspense>
+      <React.Suspense fallback={<React.Fragment />}>
+        <FooterSection />
+      </React.Suspense>
     </>
   );
 };
@@ -73,4 +92,3 @@ const App = () => {
 };
 
 export default App;
-// export default withAuthenticator(App);
