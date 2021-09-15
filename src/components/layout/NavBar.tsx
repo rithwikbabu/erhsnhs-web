@@ -10,7 +10,11 @@ export const ClearLink = styled(Link) `
   color: #8e8e8e;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 10px 14px; !important;
+  padding: 10px 14px; !important;
+  &:hover {
+    background-color: #f9f9f9;
+    text-decoration: none; !important;
+  };
 `;
 
 export const ImgLink = styled(ClearLink)`
