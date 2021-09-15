@@ -16,14 +16,14 @@ const Title = styled.h1`
   font-family: Verdana, serif;
 `;
 
-export const AboutPage = () => {
+export const SubmitHoursPage = () => {
   return (
     <>
     <PageContainer>
-      <Title>About</Title>
+      <Title>Submit Hours</Title>
     </PageContainer>
     </>
   );
 };
 
-export default AboutPage;
+export default SubmitHoursPage;

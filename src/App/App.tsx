@@ -15,12 +15,14 @@ import { PageLoader } from 'src/components/layout/Page';
 import CookieConsent from 'src/components/CookieConsent';
 
 const HomePage = React.lazy(() => import('../pages/Home/Home.page'));
-const ServicesPage = React.lazy(() => import('../pages/Services/Services.page'));
-const BlogPage = React.lazy(() => import('../pages/Blog/Blog.page'));
 const AboutPage = React.lazy(() => import('../pages/About/About.page'));
-const ContactPage = React.lazy(() => import('../pages/ContactUs/Contact.page'));
-const Service1 = React.lazy(() => import('../pages/Services/ServicePages/Service1.page'));
-const PrivacyPolicy = React.lazy(() => import('../pages/About/PrivacyPolicy.page'));
+const SubmitHoursPage = React.lazy(() => import('../pages/SubmitHours/SubmitHours.page'));
+const EventsPage = React.lazy(() => import('../pages/Events/Events.page'));
+const TutoringPage = React.lazy(() => import('../pages/Tutoring/Tutoring.page'));
+const CommitteesPage = React.lazy(() => import('../pages/Committees/Committees.page'));
+const AnnouncementsPage = React.lazy(() => import('../pages/Announcements/Announcements.page'));
+const DocumentsPage = React.lazy(() => import('../pages/Documents/Documents.page'));
+const PhotoGalleryPage = React.lazy(() => import('../pages/PhotoGallery/PhotoGallery.page'));
 
 const AppContent = () => {
   const location = useLocation<{ noscroll?: boolean } | null>();
@@ -60,15 +62,15 @@ const AppContent = () => {
       <React.Suspense fallback={<PageLoader />}>
       <NavBar />
         <Switch>
-          <Route exact component={ServicesPage} path="/projects" />
-          <Route exact component={BlogPage} path="/blog" />
-          <Route exact component={AboutPage} path="/about" />
           <Route exact component={HomePage} path="/" />
-          <Route exact component={ContactPage} path="/contact-us" />
-          {/* service pages */}
-          <Route exact component={Service1} path="/projects/mental-health-monitoring-on-social-media" />
-          {/* footer pages */}
-          <Route exact component={PrivacyPolicy} path="/about/privacy-policy" />
+          <Route exact component={AboutPage} path="/about" />
+          <Route exact component={SubmitHoursPage} path="/submit-hours" />
+          <Route exact component={EventsPage} path="/events" />
+          <Route exact component={TutoringPage} path="/tutoring" />
+          <Route exact component={CommitteesPage} path="/committees" />
+          <Route exact component={AnnouncementsPage} path="/announcements" />
+          <Route exact component={DocumentsPage} path="/documents" />
+          <Route exact component={PhotoGalleryPage} path="/photo-gallery" />
           {/* <Route path="/not-found" component={NotFoundPage} /> */}
           <Redirect to="/" />
         </Switch>
