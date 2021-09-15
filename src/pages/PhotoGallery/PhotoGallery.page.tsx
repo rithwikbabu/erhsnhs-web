@@ -16,14 +16,14 @@ const Title = styled.h1`
   font-family: Verdana, serif;
 `;
 
-export const AboutPage = () => {
+export const PhotoGalleryPage = () => {
   return (
     <>
     <PageContainer>
-      <Title>About</Title>
+      <Title>Photo Gallery</Title>
     </PageContainer>
     </>
   );
 };
 
-export default AboutPage;
+export default PhotoGalleryPage;

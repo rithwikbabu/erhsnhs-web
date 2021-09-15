@@ -16,14 +16,14 @@ const Title = styled.h1`
   font-family: Verdana, serif;
 `;
 
-export const AboutPage = () => {
+export const TutoringPage = () => {
   return (
     <>
     <PageContainer>
-      <Title>About</Title>
+      <Title>Tutoring</Title>
     </PageContainer>
     </>
   );
 };
 
-export default AboutPage;
+export default TutoringPage;

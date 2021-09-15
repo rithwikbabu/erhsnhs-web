@@ -22,7 +22,7 @@ const TutoringPage = React.lazy(() => import('../pages/Tutoring/Tutoring.page'))
 const CommitteesPage = React.lazy(() => import('../pages/Committees/Committees.page'));
 const AnnouncementsPage = React.lazy(() => import('../pages/Announcements/Announcements.page'));
 const DocumentsPage = React.lazy(() => import('../pages/Documents/Documents.page'));
-const PhotoGalleryPage = React.lazy(() => import('../pages/PhotoGallery/PhotoGallery.page'));
+const PhotoGalleryPage = React.lazy(() => import('src/pages/PhotoGallery/PhotoGallery.page'));
 
 const AppContent = () => {
   const location = useLocation<{ noscroll?: boolean } | null>();
