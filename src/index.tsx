@@ -7,7 +7,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Montserrat', 'IBM Plex Sans Thai Looped']
+    families: ['Montserrat', 'IBM Plex Sans Thai Looped', 'Libre Baskerville', 'Gentium Basic']
   }
 });
 

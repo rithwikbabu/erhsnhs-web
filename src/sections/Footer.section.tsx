@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaMedium,
   FaGithub,
+  FaInstagram,
 } from 'react-icons/fa';
 import React from 'react';
 import { Spacer } from 'src/components/layout/Spacer';
@@ -119,38 +120,35 @@ export const FooterSection = () => {
       <Content2>
         <SectionContainer>
           <Section>
-            <FSectionTitle>{'Projects'}</FSectionTitle>
-            <ClearLink to="/projects/mental-health-monitoring-on-social-media">Depression Detection</ClearLink>
+            <FSectionTitle>{'Contact'}</FSectionTitle>
+            <ClearLink to="/">eastridgenhs@gmail.com</ClearLink>
           </Section>
           <Section>
-            <FSectionTitle>{'Blog'}</FSectionTitle>
-            <a href={TWITTER_LINK}  target="_blank">Latest</a>
-            <a href="https://forms.gle/BRLPi2uAS6KPF5wg6" target="_blank">Research</a>
-            <ClearLink to="/blog/announcements">Announcements</ClearLink>
+            <FSectionTitle>{'Advisor Contact'}</FSectionTitle>
+            <ClearLink to="/">Lisa Hamernick</ClearLink>
+            <ClearLink to="/">lhamerni@sowashco.org</ClearLink>
+            <ClearLink to="/">651-425-2413</ClearLink>
           </Section>
           <Section>
-            <FSectionTitle>{'About'}</FSectionTitle>
-            <ClearLink to="/about">About Omicron</ClearLink>
-            <ClearLink to="/about">Timeline</ClearLink>
-            <ClearLink to="/help">Join Us</ClearLink>
-            <ClearLink to="/about/privacy-policy">Privacy Policy</ClearLink>
+            <FSectionTitle>{'Quick Links'}</FSectionTitle>
+            <ClearLink to="/">Apply</ClearLink>
+            <ClearLink to="/">Submit Hours</ClearLink>
+            <ClearLink to="/">Tutor</ClearLink>
+            <ClearLink to="/">Learn More</ClearLink>
           </Section>
         </SectionContainer>
         <FooterEnd>
           <FooterCompany>
             <div style={{ display: 'flex', alignItems: 'center'}}>
-              <ClearLink to="/">{'Omicron 2021'}</ClearLink>
+              <ClearLink to="/">{'ERHS NHS 2021'}</ClearLink>
             </div>
           </FooterCompany>
           <SocialIcons>
-            <LinkOut aria-label="Reddit community page" href={REDDIT_LINK}>
-              <FaReddit />
+            <LinkOut aria-label="Instagram" href={REDDIT_LINK}>
+              <FaInstagram />
             </LinkOut>
-            <LinkOut aria-label="Twitter account" href={TWITTER_LINK}>
-              <FaTwitter />
-            </LinkOut>
-            <LinkOut aria-label="Medium articles" href={MEDIUM_LINK}>
-              <FaMedium />
+            <LinkOut aria-label="Discord" href={TWITTER_LINK}>
+              <FaDiscord />
             </LinkOut>
           </SocialIcons>
         </FooterEnd>
