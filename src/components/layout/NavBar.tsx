@@ -151,7 +151,6 @@ export const NavBar: React.FC<NavBarType> = (props) => {
           </NavSection>
         </NavContainer>
       </NavContainerOuter>
-
       <ContainerMobile>
         <NavContainer>
           <ClearLink to='/' aria-label="Home page" style={{ marginLeft: '-1rem' }}>
