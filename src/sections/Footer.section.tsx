@@ -133,7 +133,6 @@ export const FooterSection = () => {
             <FSectionTitle>{'Quick Links'}</FSectionTitle>
             <ClearLink to="/">Apply</ClearLink>
             <ClearLink to="/">Submit Hours</ClearLink>
-            <ClearLink to="/">Tutor</ClearLink>
             <ClearLink to="/">Learn More</ClearLink>
           </Section>
         </SectionContainer>
