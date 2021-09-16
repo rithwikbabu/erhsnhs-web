@@ -9,7 +9,7 @@
 #### Clone the repository
 
 ```
-git clone https://github.com/Depression-Detection/frontend.git
+git clone https://github.com/erhsnhs-web.git
 cd frontend
 ```
 
