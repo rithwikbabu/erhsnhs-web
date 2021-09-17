@@ -63,6 +63,7 @@ const StyledText = styled.p`
   font-family: Gentium Basic;
   color: #7B8C89;
   line-height: 200%;
+  font-size: 18px;
 `;
 
 const TableDiv = styled.div`
@@ -120,6 +121,26 @@ const TableSubtitle = styled.h4`
   font-weight: 400;
   text-align: center;
   margin-top:0;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const RedirectButtons = styled.div`
+  align-items: center;
+  justify-content: center;
+  background-color: #E9CF76;
+  box-shadow: 0px 0px 10px #e0bf5c;
+  width: 25%;
+  height: 40px;
+  border-radius: 15px;
+`;
+
+const ButtonText = styled.text`
+  width: 100%;
+  height: 40px;
 `;
 
 export const AboutPage = () => {
@@ -207,6 +228,31 @@ export const AboutPage = () => {
             </TableTable>
           </TableWrap>
         </TableDiv>
+        <Spacer/>
+        <ColoredBox>
+          <Title>How to Join NHS</Title>
+        </ColoredBox>
+        <ColoredBox style={{'background-color': '#E9CF76'}}>
+          <StyledText style={{'color': '#000000'}}>The 2021-2022 application is now closed. For more information about the 2022-2023 application, please check back in the spring. </StyledText>
+        </ColoredBox>
+        <Spacer/>
+        <StyledText>Membership in the National Honor Society is based upon excellence in four areas:<br/> Scholarship, Leadership, Service, and Character </StyledText>
+        <StyledText>To be eligible for membership a student must have and be able to maintain a cumulative grade point average of 3.800 or above for their high school years.</StyledText>
+        <StyledText>In order to evaluate a student’s leadership, character, and service abilities, each potential member is required to provide information describing his/her abilities, activities, and interests. The applications will be accepted via Google Classroom this year.  Please make a copy of the application, fill out the required written portion and cut and paste the other requirements as stated on the template.  To submit your application: <br/>
+          <ul>
+            <li>Go to Google classroom and join class: <a href="https://classroom.google.com/u/0/h">ws3mifds</a></li>
+            <li>Submit your application with required documentation into the Google classroom folder</li>
+            <li>Your application MUST be computer generated</li>
+            <li>Be grammatically and mechanically correct</li>
+            <li>Convey the desire and commitment to becoming an ACTIVE National Honor Society member</li>
+            <li>Please realize that if you are committing to zero hour or PSEO this does not exempt you from being an active member in NHS</li>
+          </ul>
+        </StyledText>
+        <StyledText style={{'font-weight':'bold'}}>Applicants will be notified in May, and will officially join NHS in the fall with the start of the next school year (i.e. apply as a freshman in March/April, and join as a sophomore in Sept/Oct ). Returning members already in NHS do not have to apply again. </StyledText>
+        <ButtonContainer>
+        <RedirectButtons onclick="window.open('https://docs.google.com/document/d/1yVZ3MjL0qcQeBegRiv1ghZWKC5fTYFiuk0i5K2EfTwI/edit','mywindow');"><ButtonText>New Applicant Letter</ButtonText></RedirectButtons>
+        <RedirectButtons>Application Instructions</RedirectButtons>
+        </ButtonContainer>
       </PageContainer>
     </Background>
   );
