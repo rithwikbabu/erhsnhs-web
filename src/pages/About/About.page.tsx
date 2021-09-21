@@ -112,6 +112,7 @@ const TableTitle = styled.h4`
   color: #2a2a2a;
   letter-spacing: .5px;
   text-align: center;
+  button:hover:before {content:"Ryder and Rithwik"};
 `;
 
 const TableSubtitle = styled.h4`
@@ -128,22 +129,22 @@ const ButtonContainer = styled.div`
   justify-content: space-evenly;
 `;
 
-const RedirectButtons = styled.div`
-  align-items: center;
-  justify-content: center;
-  background-color: #E9CF76;
-  box-shadow: 0px 0px 10px #e0bf5c;
-  width: 25%;
-  height: 40px;
-  border-radius: 15px;
-`;
-
 const ButtonText = styled.text`
   width: 100%;
   height: 40px;
 `;
 
+const LinkButton = styled(Button)`
+  background-color: #E9CF76;
+  box-shadow: 0px 0px 10px #e0bf5c;
+`;
+
 export const AboutPage = () => {
+
+  function changeText(e) {
+    e.state.value = 'red';
+  }
+  
   return (
     <Background>
       <PageContainer>
@@ -219,7 +220,7 @@ export const AboutPage = () => {
                   </TableData>
                   <TableData>
                     <TableBox>
-                      <TableTitle>Phuong Dao</TableTitle>
+                      <TableTitle onMouseOver={changeText}>Phuong Dao</TableTitle>
                       <TableSubtitle>Webmaster</TableSubtitle>
                     </TableBox>
                   </TableData>
@@ -249,9 +250,10 @@ export const AboutPage = () => {
           </ul>
         </StyledText>
         <StyledText style={{'font-weight':'bold'}}>Applicants will be notified in May, and will officially join NHS in the fall with the start of the next school year (i.e. apply as a freshman in March/April, and join as a sophomore in Sept/Oct ). Returning members already in NHS do not have to apply again. </StyledText>
+        <Spacer/>
         <ButtonContainer>
-        <RedirectButtons onclick="window.open('https://docs.google.com/document/d/1yVZ3MjL0qcQeBegRiv1ghZWKC5fTYFiuk0i5K2EfTwI/edit','mywindow');"><ButtonText>New Applicant Letter</ButtonText></RedirectButtons>
-        <RedirectButtons>Application Instructions</RedirectButtons>
+          <LinkButton>New Applicant Letter</LinkButton>
+          <LinkButton>Application Instructions</LinkButton>
         </ButtonContainer>
       </PageContainer>
     </Background>
