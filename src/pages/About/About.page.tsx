@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from "react";
 import { Page } from 'src/components/layout/Page';
 import styled from 'styled-components/macro';
 import { Button } from 'src/components/Button';
@@ -140,11 +141,11 @@ const LinkButton = styled(Button)`
 `;
 
 export const AboutPage = () => {
+  const [name, setText] = useState("Phuong Dao");
+  const [desc, setText2] = useState("Webmaster");
+  const changeText = (text) => setText(text);
+  const changeText1 = (text) => setText2(text);
 
-  function changeText(e) {
-    e.state.value = 'red';
-  }
-  
   return (
     <Background>
       <PageContainer>
@@ -179,7 +180,7 @@ export const AboutPage = () => {
         <br/>
         <br/>
         <StyledText>
-          Four times a year, the East Ridge NHS and Student Council partner with the American Red Cross to host school-wide blood drives, where generous donors can help saves the lives of thousands of patients nationwide. 
+          Four times a year, the East Ridge NHS and Student Council partner with the American Red Cross to host school-wide blood drives, where generous donors can help saves the lives of thousands of patients nationwide<span onClick={() => changeText1("Ryder & Rithwik")}><span onClick={() => changeText("Designed By:")}>.</span></span>
         </StyledText>
         <Spacer/>
         <Title style={{'font-size':'30px'}}>2021-2022 Board Members</Title>
@@ -220,8 +221,8 @@ export const AboutPage = () => {
                   </TableData>
                   <TableData>
                     <TableBox>
-                      <TableTitle onMouseOver={changeText}>Phuong Dao</TableTitle>
-                      <TableSubtitle>Webmaster</TableSubtitle>
+                      <TableTitle>{name}</TableTitle>
+                      <TableSubtitle>{desc}</TableSubtitle>
                     </TableBox>
                   </TableData>
                 </TableRow>
