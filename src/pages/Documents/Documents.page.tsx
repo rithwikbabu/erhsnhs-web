@@ -56,6 +56,9 @@ const ButtonContainer = styled.div`
   justify-content: space-evenly;
 `;
 
+const Link = styled.a`
+
+`;
 const LinkButton = styled(Button)`
   background-color: #E9CF76;
   box-shadow: 0px 0px 10px #e0bf5c;
@@ -82,12 +85,24 @@ export const DocumentsPage = () => {
       </Spacer>
       <Line></Line>
       <ButtonContainer>
+        <Link href="https://docs.google.com/presentation/d/10yFpQY-lBpttisdRZrIK1CivDWLjgP-Dl1Yn3XAEHII/edit?usp=sharing" target="_blank">
         <LinkButton>10/8/21</LinkButton>
+        </Link>
+        <Link href="https://docs.google.com/presentation/d/1MyJ-LL0-Qhry5qaDeN7Oez2vniGnRKr8cRHP69Du50I/edit?usp=sharing" target="_blank">
         <LinkButton>9/10/21</LinkButton>
+        </Link>
+        <Link href="https://docs.google.com/presentation/d/1fb9TRJhAFholLNkxmQnWmVUIX5ThljZKBqmN_2jD6qo/edit?usp=sharing" target="_blank">
         <LinkButton>1/17/20</LinkButton>
+        </Link>
+        <Link href="https://docs.google.com/presentation/d/1njQ5LHKlFm1DSmCFN1BxBej4nXlq_VPN0ch_vUkfPqo/edit?usp=sharing" target="_blank">
         <LinkButton>11/22/19</LinkButton>
+        </Link>
+        <Link href="https://docs.google.com/presentation/d/1yYP8u5NIrUVvyBTCMSmsXweX9g5mdMtrOocw7I13GsU/edit?usp=sharing" target="_blank">
         <LinkButton>10/25/19</LinkButton>
+        </Link>
+        <Link href="https://docs.google.com/presentation/d/1nTI4ut_8CsYxBTT45wbvgFxW0V8uRI1ZHc4PTFkW0ns/edit?usp=sharing" target="_blank">
         <LinkButton>9/6/19</LinkButton>
+        </Link>
 
       </ButtonContainer>
     </PageContainer>
