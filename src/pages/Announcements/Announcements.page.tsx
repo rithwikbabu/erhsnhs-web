@@ -2,6 +2,7 @@ import React from 'react';
 import { Page } from 'src/components/layout/Page';
 import styled from 'styled-components/macro';
 import { Button } from 'src/components/Button';
+import { HeroBlack } from 'src/components/layout/Hero/HeroBlack';
 
 const PageContainer = styled(Page)`
   align-items: center;

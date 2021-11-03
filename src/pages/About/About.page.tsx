@@ -140,6 +140,12 @@ const LinkButton = styled(Button)`
   box-shadow: 0px 0px 10px #e0bf5c;
 `;
 
+const HideUnderline = styled.a`
+&:hover {
+  text-decoration: None;
+}
+`;
+
 export const AboutPage = () => {
   const [name, setText] = useState("Phuong Dao");
   const [desc, setText2] = useState("Webmaster");
@@ -253,8 +259,8 @@ export const AboutPage = () => {
         <StyledText style={{'font-weight':'bold'}}>Applicants will be notified in May, and will officially join NHS in the fall with the start of the next school year (i.e. apply as a freshman in March/April, and join as a sophomore in Sept/Oct ). Returning members already in NHS do not have to apply again. </StyledText>
         <Spacer/>
         <ButtonContainer>
-          <LinkButton>New Applicant Letter</LinkButton>
-          <LinkButton>Application Instructions</LinkButton>
+          <HideUnderline href='https://docs.google.com/document/d/1yVZ3MjL0qcQeBegRiv1ghZWKC5fTYFiuk0i5K2EfTwI/edit'><LinkButton>New Applicant Letter</LinkButton></HideUnderline>
+          <HideUnderline href='https://docs.google.com/document/d/1z6yB7YSoIhsvLmXqAIvmdZzgSgCKkWDtp3MUvqc0HKc/edit#'><LinkButton>Application Instructions</LinkButton></HideUnderline>
         </ButtonContainer>
       </PageContainer>
     </Background>
