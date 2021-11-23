@@ -12,10 +12,9 @@ const PageContainer = styled(Page)`
 `;
 
 const Title = styled.h1`
-  color: white;
+  color: black;
   font-family: Verdana, serif;
   text-align: center;
-
 `;
 
 const Hero = styled(HeroBG)`
@@ -25,12 +24,26 @@ const Hero = styled(HeroBG)`
   justify-content: center;
 `;
 
+const Banner = styled.div`
+  width: 900px;;
+`;
+
+const BannerContainer = styled.div`
+padding: 4em 1.6em;
+vertical-align: middle;
+display: table-cell;
+`;
+
 export const SubmitHoursPage = () => {
   return (
     <>
     <PageContainer>
       <Hero>
-        <Title>Submit Hours</Title>
+        <Banner>
+        <BannerContainer>
+          <Title>Submit Hours</Title>
+        </BannerContainer>
+        </Banner>
       </Hero>
 
     </PageContainer>
