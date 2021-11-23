@@ -11,38 +11,66 @@ const PageContainer = styled(Page)`
   color: white;
 `;
 
-const Title = styled.h1`
-  color: black;
-  font-family: Verdana, serif;
-  text-align: center;
+const BoldText = styled.span`
+  color: #2a2a2a;
+  font-family: Montserrat;  
+  font-weight: 900;
+  font-size: 19.95px;
+`;
+
+const Text = styled.span`
+  color: #2a2a2a;
+  font-family: Montserrat;  
+  font-size: 19.95px;
 `;
 
 const Hero = styled(HeroBG)`
   width: 100%;
   height: 100%;
-  align-items; center;
-  justify-content: center;
 `;
 
 const Banner = styled.div`
-  width: 900px;;
+  width: 900px;
+  margin: 0 auto;
 `;
 
 const BannerContainer = styled.div`
-padding: 4em 1.6em;
-vertical-align: middle;
-display: table-cell;
+  padding: 4em 1.6em;
+  vertical-align: middle;
+  display: table-cell;
+  margin: 0 auto;
 `;
 
+const SiteElements = styled.div`
+  width: 900px;
+  height: 100%;
+  background-color: #f8eaa9;
+  text-align: center;
+`;
+
+const Break = styled.br`
+line-height: 40px;
+`;  
 export const SubmitHoursPage = () => {
   return (
     <>
     <PageContainer>
       <Hero>
         <Banner>
-        <BannerContainer>
-          <Title>Submit Hours</Title>
-        </BannerContainer>
+          <BannerContainer>
+            <SiteElements>
+              <br/>
+              <br/>
+              <BoldText>​PLEASE READ BEFORE SUBMITTING HOURS:</BoldText>
+              <Break/>
+              <Text>The submission form is now fixed.</Text>
+              <br/>
+              <Text>Thank you for your patience!</Text>
+              <br/>
+              <br/>
+              <BoldText>​THINGS TO NOTE:</BoldText>
+            </SiteElements>
+          </BannerContainer>
         </Banner>
       </Hero>
 
